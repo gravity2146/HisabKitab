@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  color: lightblue;
+  background-color: rgb(28, 156, 124);
+}
+
+header {
+  font-size: 5rem;
+  position: relative;
+  height: 35vh;
+  border-bottom: 7px solid #eee;
+}
+.credit {
+  background-color: mediumblue;
+  margin-left: 50px;
+  font-size: 4rem;
+}
+.debit {
+  background-color: rgb(2, 34, 2);
+  margin-right: 50px;
+  font-size: 4rem;
+}
+main {
+  height: 65vh;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.left {
+  font-size: 4rem;
+  text-align: left;
+  position: absolute;
+  width: 100%;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.right {
+  font-size: 4rem;
+  text-align: right;
+  position: absolute;
+  width: 100%;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.value {
+  font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  width: 40%;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.center {
+  align-items: flex-end;
+}
+.balance {
+  color: mediumvioletred;
+}
