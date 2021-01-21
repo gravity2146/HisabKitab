@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF -8" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Hisab Kitab</title>
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase.js"></script>
+</head>
+<body>
+  
+<script>
+  const firebaseConfig = {
+  apiKey: "AIzaSyDCcjObGPhmZo_zrth70VqELPeQsepcIoc",
+  authDomain: "hisabkitab2146.firebaseapp.com",
+  databaseURL: "https://hisabkitab2146-default-rtdb.firebaseio.com",
+  projectId: "hisabkitab2146",
+  storageBucket: "hisabkitab2146.appspot.com",
+  messagingSenderId: "235969958625",
+  appId: "1:235969958625:web:c5be27e8c584dbe4035da0",
+  measurementId: "G-KN7VS8N6C3",
+};
+firebase.initializeApp(firebaseConfig);
+
+const preObject = firebase.database().ref().child("object");
+var l = [];
+function getData() {
+  firebase
+    .database()
+    .ref("/")
+    .once("value", function (snapshot) {
+      
+      snapshot.forEach(function (childsnapshot) {
+        l.push(childsnapshot.key);
+        l.push((childData = childsnapshot.val()));
+      });
+    });
+}
+getData();
+</script>
+  <pre id = 'object'></pre>
+    <header>
+        <h4> Your Hisab Kitab </h1>
+            <p></p>
+            <p></p>
+            
+            <p class="balance">You Have Left with 100 rs</p>
+            <p class = "search">Search Your Name Here</p>
+            <input class="name" />
+            <button class="set"> Set </button>
+            
+    </header>
+<main>
+    <!-- Option to fund Account -->
+    <button class="credit">Credit</button>
+
+  <!-- Option to debit from Account -->
+ 
+  <button class="debit">Debit</button>
+  
+
+ <!-- Option to enter amount Account -->
+  
+  <input class="value" />
+
+
+<!-- outstanding balance -->
+
+</main>
+<script src="script.js"></script>
+
+</body>
